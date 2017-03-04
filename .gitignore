@@ -48,7 +48,8 @@ Temporary Items
 */.vs/
 */Temp/
 */Library/
-*/ProjectSettings
+*/ProjectSettings/
+*/obj/
 
 # File extensions
 *.meta
