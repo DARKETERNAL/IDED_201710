@@ -30,7 +30,6 @@ $RECYCLE.BIN/
 
 # Thumbnails
 ._*
-*.meta
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
@@ -49,4 +48,4 @@ Temporary Items
 StringProcess/StringProcess.sln
 StringProcess/ProjectSettings/
 StringProcess/Library
-StringProcess/.vs/
+StringProcess/obj/Debug/
