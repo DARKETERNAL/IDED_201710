@@ -30,6 +30,7 @@ $RECYCLE.BIN/
 
 # Thumbnails
 ._*
+*.meta
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
@@ -45,3 +46,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+StringProcess/StringProcess.sln
+StringProcess/ProjectSettings/
+StringProcess/Library
+StringProcess/.vs/
