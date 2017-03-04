@@ -1,17 +1,49 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class InputEvent : UnityEvent<string>
 { }
 
-public class GameController : MonoBehaviour
+[RequireComponent(typeof(GameManager))]
+public class GameInputController : MonoBehaviour
 {
+    [SerializeField]
+    private Text displayText;
+
+    [SerializeField]
+    private Text guessedText;
+
     private InputEvent onInputReceived;
+    private GameManager gameManager;
+
+    private bool inputEnabled = true;
+
+    public void ValidateWord()
+    {
+        bool guessedWordCorrectly = gameManager.ValidateWord(guessedText.text);
+
+        if (guessedWordCorrectly)
+        {
+            Debug.Log("Correct!");
+        }
+        else
+        {
+            Debug.Log("Incorrect");
+        }
+    }
+
+    public void EnableInputProcessing(bool val)
+    {
+        this.enabled = val;
+    }
 
     // Use this for initialization
     private void Start()
     {
+        gameManager = GetComponent<GameManager>();
+
         onInputReceived = new InputEvent();
         onInputReceived.AddListener(OnInputReceived);
     }
@@ -21,18 +53,11 @@ public class GameController : MonoBehaviour
         if (!string.IsNullOrEmpty(input))
         {
             Debug.Log(string.Format("Received input [{0}]. Processing", input));
+            gameManager.ProcessInput(input);
 
-            if (StringProcessor.Instance != null)
+            if (displayText != null)
             {
-                bool wordHasLetter = StringProcessor.Instance.WordContainsLetter(input);
-
-                if (wordHasLetter)
-                {
-                }
-                else
-                {
-
-                }
+                displayText.text = gameManager.HintWord;
             }
         }
     }
