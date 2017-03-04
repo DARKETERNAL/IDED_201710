@@ -38,7 +38,6 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-*.csproj
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -46,8 +45,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-StringProcess/.vs
-StringProcess/StringProcess.sln
-StringProcess/ProjectSettings/
-StringProcess/Library
-StringProcess/obj/Debug/
+*/.vs/
+*/Temp/
+*/Library/
+*/ProjectSettings
+
+# File extensions
+*.meta
+*.csproj
+*.exe
