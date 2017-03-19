@@ -45,6 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#El * indica que ignora cualquier carpeta que se llame .vs
+# sin importar la ruta que venga atrás
+#ej. C:/Users/Yo/Projects/Unity/Tutorial/.vs
+
 */.vs/
 */Temp/
 */Library/
@@ -52,6 +57,7 @@ Temporary Items
 */obj/
 
 # File extensions
+# Por favor no me suban los .exe
 *.meta
 *.csproj
 *.exe
