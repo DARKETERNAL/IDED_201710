@@ -57,7 +57,7 @@ Temporary Items
 */obj/
 
 # File extensions
-# Por favor no me suban los .exe
+# Por favor no me suban los .exe ni los .meta
 *.meta
 *.csproj
 *.exe
